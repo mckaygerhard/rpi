@@ -1,0 +1,121 @@
+Format: 1.8
+Date: Mon, 29 Jan 2018 21:57:15 +0100
+Source: ngcp-rtpengine
+Binary: ngcp-rtpengine-daemon ngcp-rtpengine-recording-daemon ngcp-rtpengine-iptables ngcp-rtpengine ngcp-rtpengine-kernel-source ngcp-rtpengine-kernel-dkms ngcp-rtpengine-utils
+Architecture: source armhf all
+Version: 6.1.1.0+0~mr6.1.1.0
+Distribution: unstable
+Urgency: medium
+Maintainer: Sipwise Development Team <support@sipwise.com>
+Changed-By: Sipwise Jenkins Builder <jenkins@sipwise.com>
+Description:
+ ngcp-rtpengine - NGCP RTP/media proxy - meta package.
+ ngcp-rtpengine-daemon - Proxy for RTP and media streams used in NGCP, userspace part.
+ ngcp-rtpengine-iptables - IPtables extension module for the kernel-space NGCP media proxy.
+ ngcp-rtpengine-kernel-dkms - IPtables kernel module for the NGCP media proxy - DKMS.
+ ngcp-rtpengine-kernel-source - IPtables kernel module for the NGCP media proxy - source.
+ ngcp-rtpengine-recording-daemon - Recording daemon for RTP and media streams
+ ngcp-rtpengine-utils - Scripts and Perl modules for NGCP rtpengine
+Changes:
+ ngcp-rtpengine (6.1.1.0+0~mr6.1.1.0) unstable; urgency=medium
+ .
+   [ Pawel Kuzak ]
+   * [8941c82] Fix control statistics headlines
+ .
+   [ Claudiu Boriga ]
+   * [3472821] Add option to set TOS for control-ng interface
+   * [43f527f] Add documentation for the control-tos option
+   * [c31ffa4] Add paramaters to disable redis communication in case of multiple errors
+   * [562c5b4] Add parameter that sets a timeout for redis commands
+   * [9e96732] complete missing info for new commands
+   * [4850923] Make redis connection timeout configurable
+   * [142d91b] fix typo in README.md
+ .
+   [ Guillem Jover ]
+   * [172bd1f] TT#26513 debian: Simplify upstream version fetching
+   * [a456e20] TT#26513 Remove unused modprobe variables
+   * [0d3e693] TT#26513 Improve sysvinit output messages
+   * [7082318] TT#26513 Pass --retry=5 to start-stop-daemon and avoid sleeping
+   * [1b8f5e4] TT#26513 Preserve errno on error returns
+   * [fd3c1d2] TT#26513 Delete the kernel forwarding table on startup
+ .
+   [ Richard Fuchs ]
+   * [d10952a] TT#26757 add tcp_listener framework
+   * [2eb0169] TT#26756 clean up CLI code using streambuf
+   * [e1ce749] TT#28354 consolidate CLI string handling
+   * [b7aeff9] TT#24550 implement CLI get/set log level
+   * [7b757ff] allow -ip host:port syntax in rtpengine-ctl, and document loglevel cmds
+   * [61d828a] change str_chr_str() semantics
+   * [1aa9944] TT#27550 implement interface round-robin selection
+   * [2e5b80f] add config file options to README
+   * [8733875] README updates
+   * [c17f4fe] avoid side effects in assert()
+   * [018e35c] TT#27200 add option to omit a=rtcp attribute
+   * [acba275] suppress log message on "comprehension option" STUN attributes
+   * [399e15b] make the callhash global
+   * [790e596] move cngs out of callmaster into global scope
+   * [e87b271] move matching regexps out of callmaster into global
+   * [dffbddb] don't use g_ prefix for global variables
+   * [cf3a8f9] move 'poller' member of callmaster into global scope
+   * [c969ea1] move stats and statsps into global scope
+   * [7411403] move "totalstats" out of callmaster into global scope
+   * [d65a6bb] move latest_graphite_interval_start to global scope
+   * [f2b93f9] move config options into global struct rtpengine_config
+   * [75056a8] eliminate the callmaster struct
+   * [0e3f5eb] move all remaining config options into global config struct
+   * [46d8539] move lib/ config options into struct
+   * [74bae6a] TT#30150 add option for different logging styles
+   * [b8dbd99] TT#30403 consolidate NG flags processing functions
+   * [d7dd742] TT#30403 implement codec stripping
+   * [d31fb36] TT#30403 parse and retain a=fmtp infos
+   * [f625d48] TT#30403 consolidate dictionary and alias "flags" values handling
+   * [2540c5d] TT#30403 support codec-offer
+   * [ca78747] TT#30405 rename media->rtp_payload_types to ->codecs for brevity
+   * [321fb5e] fix double str_shift for 'list sessions CALLID'
+   * [edb21fe] use EOL instead of shutdown to terminate command in rtpengine-ctl
+   * [8f563c8] fix compilation when `with_iptables_option` is set to no
+   * [1477f97] TT#29151 add 'loop protect' feature
+ .
+   [ Sipwise Jenkins Builder ]
+Checksums-Sha1:
+ 77463c5dc8d8cc38283fbd3d7f19a06fb26daf4c 1670 ngcp-rtpengine_6.1.1.0+0~mr6.1.1.0.dsc
+ 815d0d0b198a00c6c981a4ef84b5c8577e31a707 282304 ngcp-rtpengine_6.1.1.0+0~mr6.1.1.0.tar.xz
+ 764834b098c63acd73c573e0e9797cbf22a6e95d 698552 ngcp-rtpengine-daemon-dbgsym_6.1.1.0+0~mr6.1.1.0_armhf.deb
+ 9b095d747fa2ae85ecbc8554cddccd0deaccedcc 148340 ngcp-rtpengine-daemon_6.1.1.0+0~mr6.1.1.0_armhf.deb
+ de1d1fe8ee510fce16dfd10dc47e8ceeb15f8983 2418 ngcp-rtpengine-iptables-dbgsym_6.1.1.0+0~mr6.1.1.0_armhf.deb
+ 1339cb467ec86f4c844f204358071a770e268aa5 28580 ngcp-rtpengine-iptables_6.1.1.0+0~mr6.1.1.0_armhf.deb
+ 0bbe28e27e2ed2d8eb916b885b11511edc59b5a9 47916 ngcp-rtpengine-kernel-dkms_6.1.1.0+0~mr6.1.1.0_all.deb
+ 682cd018a3652af6a2113796cb1a60bb712c99fc 72838 ngcp-rtpengine-kernel-source_6.1.1.0+0~mr6.1.1.0_all.deb
+ 642cfb1f60de1548d97fb7cf4e3940acb8f1e322 182980 ngcp-rtpengine-recording-daemon-dbgsym_6.1.1.0+0~mr6.1.1.0_armhf.deb
+ feb76095b261eab0cc41f751168f77e300c3e078 50936 ngcp-rtpengine-recording-daemon_6.1.1.0+0~mr6.1.1.0_armhf.deb
+ cf6fd3316f52a3b334d9d1049a38fa6b8da15b8c 44542 ngcp-rtpengine-utils_6.1.1.0+0~mr6.1.1.0_all.deb
+ 331103e9819a8334ca31a83a86141691822fb7dd 74044 ngcp-rtpengine_6.1.1.0+0~mr6.1.1.0_all.deb
+ 67f2a20f6e62016b44d7ad17b460f024a440a3e0 13497 ngcp-rtpengine_6.1.1.0+0~mr6.1.1.0_armhf.buildinfo
+Checksums-Sha256:
+ c42a9eaea5cabb3a25d932fcc800e6e77aa650fb3793fbee63eb14c934381030 1670 ngcp-rtpengine_6.1.1.0+0~mr6.1.1.0.dsc
+ 76502085eeaffeefb7182ecd87ccdf5fb30faaa369a060c2efd2f639a40c077d 282304 ngcp-rtpengine_6.1.1.0+0~mr6.1.1.0.tar.xz
+ 14add2a342fd8f2d5c1057a666f36d57534a972b0eaf3af4c53b0656fae3762a 698552 ngcp-rtpengine-daemon-dbgsym_6.1.1.0+0~mr6.1.1.0_armhf.deb
+ d1059b0e408e931c5fac6b55c195bd8dbe2a46c6e26b2dfbd59f5e9293f4a1ec 148340 ngcp-rtpengine-daemon_6.1.1.0+0~mr6.1.1.0_armhf.deb
+ 197d935c1444fa4930154137e4a4f7b2e7d238e3419813cf109154751ab48288 2418 ngcp-rtpengine-iptables-dbgsym_6.1.1.0+0~mr6.1.1.0_armhf.deb
+ 252012782b3887c732a3b3c930dad060362d15a444deaccadc51cce87b13cb1d 28580 ngcp-rtpengine-iptables_6.1.1.0+0~mr6.1.1.0_armhf.deb
+ f437e06cf8277e8cddc93cbbf02975041a4cbc5625bbd165606fbcdcd0e42874 47916 ngcp-rtpengine-kernel-dkms_6.1.1.0+0~mr6.1.1.0_all.deb
+ e44852e7c8b25d06f9b11c3302592411419bf4595ddfe9edd20202dc13b3f04f 72838 ngcp-rtpengine-kernel-source_6.1.1.0+0~mr6.1.1.0_all.deb
+ 38bc0495c53b1a46bafe203838820de6df4f222e71fe678de89ebe26976e7800 182980 ngcp-rtpengine-recording-daemon-dbgsym_6.1.1.0+0~mr6.1.1.0_armhf.deb
+ f77aaa99798207a049e4cf68c85feadcd267b9b06eccf97ae37788ba71229509 50936 ngcp-rtpengine-recording-daemon_6.1.1.0+0~mr6.1.1.0_armhf.deb
+ 44c3b6005c05304d5538a3634ff3b017f9f77918cec7c762c2fcb828a20269e4 44542 ngcp-rtpengine-utils_6.1.1.0+0~mr6.1.1.0_all.deb
+ cc792d4be210ba09d83a7ea2cecc7afb49797e537f3005fd13670e39d1ee9aa9 74044 ngcp-rtpengine_6.1.1.0+0~mr6.1.1.0_all.deb
+ 1522502092f799833932ba4a09f71d278d0aa76f86b25744e6fd8893f80a8013 13497 ngcp-rtpengine_6.1.1.0+0~mr6.1.1.0_armhf.buildinfo
+Files:
+ 8df616bfaa7eed5ae0e7c0367b27cfaa 1670 net optional ngcp-rtpengine_6.1.1.0+0~mr6.1.1.0.dsc
+ 43d5ca839cc3786d9c6f628fc67fff93 282304 net optional ngcp-rtpengine_6.1.1.0+0~mr6.1.1.0.tar.xz
+ b92f89fed5b4f2d635f8e76c8f3f0f3b 698552 debug extra ngcp-rtpengine-daemon-dbgsym_6.1.1.0+0~mr6.1.1.0_armhf.deb
+ 6262f352e6c48cec33c8c1b19ee2c0ea 148340 net optional ngcp-rtpengine-daemon_6.1.1.0+0~mr6.1.1.0_armhf.deb
+ ad3146f29da677d7c77c21882db56740 2418 debug extra ngcp-rtpengine-iptables-dbgsym_6.1.1.0+0~mr6.1.1.0_armhf.deb
+ 4f802eb33322d84c8045ef777f1151ac 28580 net optional ngcp-rtpengine-iptables_6.1.1.0+0~mr6.1.1.0_armhf.deb
+ 3d3e05cbba7d957a1a4f2b85d7248196 47916 net optional ngcp-rtpengine-kernel-dkms_6.1.1.0+0~mr6.1.1.0_all.deb
+ 7506ce99381a80b0a40010af71e9517d 72838 net optional ngcp-rtpengine-kernel-source_6.1.1.0+0~mr6.1.1.0_all.deb
+ 47d736b51fa225d8ae15843954bccf16 182980 debug extra ngcp-rtpengine-recording-daemon-dbgsym_6.1.1.0+0~mr6.1.1.0_armhf.deb
+ 825d26b3c0a416d26c469e3ae2ebe662 50936 net optional ngcp-rtpengine-recording-daemon_6.1.1.0+0~mr6.1.1.0_armhf.deb
+ 6f92ddf0eb53cfae04831ae1ba8ac309 44542 net optional ngcp-rtpengine-utils_6.1.1.0+0~mr6.1.1.0_all.deb
+ 9c8b34f547b929687ab398269d2a39dc 74044 net optional ngcp-rtpengine_6.1.1.0+0~mr6.1.1.0_all.deb
+ de2cfea4a93c4cfd62a1e2b415bed0bc 13497 net optional ngcp-rtpengine_6.1.1.0+0~mr6.1.1.0_armhf.buildinfo
