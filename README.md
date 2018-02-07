@@ -26,12 +26,12 @@ boot_delay=1
 ## Kamailio
 Built `.deb`s with all modules except `exclude_modules=db_mongodb ndb_mongodb db_cassandra ndb_cassandra db_oracle nsq osp phonenum`
 
-- kamailio 5.1.1 - 45233bf5d736b7f47390d150d41511702212183b
+- kamailio 5.1.1 - 45233bf
 
 
 ## RTPEngine
 
-- rtpengine 6.1.1.0 - f3af4c48df89e7cf1470311b23f337def6725bf5 -> [TODO]
+- rtpengine 6.1.1.0 - f3af4c4
 
 
 ## FreeSWITCH
