@@ -24,7 +24,7 @@ boot_delay=1
 
 
 ## Kamailio
-Built `.deb`s with all modules except `exclude_modules=db_mongodb ndb_mongodb db_cassandra ndb_cassandra db_oracle nsq osp phonenum`
+Built `.deb`s with all modules except `exclude_modules=db_mongodb ndb_mongodb db_cassandra ndb_cassandra db_oracle nsq osp phonenum`.
 
 - kamailio 5.1.1 - 45233bf
 
@@ -35,5 +35,6 @@ Built `.deb`s with all modules except `exclude_modules=db_mongodb ndb_mongodb db
 
 
 ## FreeSWITCH
+Built `.deb`s with the minimal `modules.conf` from master branch.
 
-- freeswitch 1.8 -> [TODO]
+- freeswitch 1.9.0 (master) - 38153a3
