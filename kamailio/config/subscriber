@@ -1,0 +1,3 @@
+user(str) password(str) domain(str) name(str) mid(str) ha1(str,null) ha1b(str,null)
+111111111111111:Password:localhost:UAC:
+222222222222222:Password:localhost:UAS:
