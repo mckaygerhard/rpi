@@ -14,13 +14,13 @@ Linux raspberrypi 4.9.59-v7+ #1047 SMP Sun Oct 29 12:19:23 GMT 2017 armv7l GNU/L
 ```
 pi@raspberrypi:~ $ cat /boot/config.txt
 ...
-arm_freq=1200
+total_mem=1024
+arm_freq=1300
 core_freq=500
 sdram_freq=500
-over_voltage=5
-#disable_splash=1
-force_turbo=1
-boot_delay=1
+sdram_schmoo=0x02000020
+over_voltage=2
+sdram_over_voltage=2
 ```
 
 
