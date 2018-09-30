@@ -66,6 +66,7 @@ Built `.deb`s with all modules except `exclude_modules=db_mongodb ndb_mongodb db
 Built `.deb`s with all modules.
 
 - rtpengine 6.1.1.0 - f3af4c4
+- rtpengine 7.0.0.0 - 3102357
 
 
 

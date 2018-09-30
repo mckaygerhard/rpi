@@ -1,0 +1,105 @@
+Format: 1.8
+Date: Mon, 24 Sep 2018 18:58:56 +0200
+Source: ngcp-rtpengine
+Binary: ngcp-rtpengine-daemon ngcp-rtpengine-recording-daemon ngcp-rtpengine-iptables ngcp-rtpengine ngcp-rtpengine-kernel-source ngcp-rtpengine-kernel-dkms ngcp-rtpengine-utils
+Architecture: source armhf all
+Version: 7.0.0.0+0~mr7.0.0.0
+Distribution: unstable
+Urgency: medium
+Maintainer: Sipwise Development Team <support@sipwise.com>
+Changed-By: Sipwise Jenkins Builder <jenkins@sipwise.com>
+Description:
+ ngcp-rtpengine - NGCP RTP/media proxy - meta package.
+ ngcp-rtpengine-daemon - Proxy for RTP and media streams used in NGCP, userspace part.
+ ngcp-rtpengine-iptables - IPtables extension module for the kernel-space NGCP media proxy.
+ ngcp-rtpengine-kernel-dkms - IPtables kernel module for the NGCP media proxy - DKMS.
+ ngcp-rtpengine-kernel-source - IPtables kernel module for the NGCP media proxy - source.
+ ngcp-rtpengine-recording-daemon - Recording daemon for RTP and media streams
+ ngcp-rtpengine-utils - Scripts and Perl modules for NGCP rtpengine
+Changes:
+ ngcp-rtpengine (7.0.0.0+0~mr7.0.0.0) unstable; urgency=medium
+ .
+   [ Alexander Lutay ]
+   * [bc9f09c] TT#41051 Fix shellcheck warning for Red Hat init scripts
+ .
+   [ Richard Fuchs ]
+   * [178391e] fix possible core dump when processing certain malformed SDP
+   * [0aeb06f] TT#40900 store metadata in call struct instead of recording struct
+   * [694e9d8] do not memcmp against uninitialized bytes
+   * [89c0aa1] additional options for test scripts
+   * [a44b34a] don't free event base before calling loopbreak()
+   * [59d3399] add DTMF capability to simulator test script
+   * [d4afb14] fix DTMF packet allocation size
+   * [b4cac09] use git plumbing to determine branch and commit IDs
+   * [7dd8ed0] quote options value strings in error output
+   * [828e2ee] add missing lock for configuring mixed output decoder
+   * [135dfb7] fix handling of >1 consecutive media ports
+   * [cab9d89] TT#42500 fix only one crypto suite being offered.
+   * [b82cf56] clean up code artefacts from cab9d895
+   * [e67b9c4] TT#43556 support blocking of DTMF event packets
+   * [89084da] TT#43855 support XMLRPC callback to Kamailio
+   * [34759b7] add ability to specify payload type in pcap replay script
+   * [4e6f2dc] silence build warnings when no git is present
+   * [04a8302] TT#43557 implement media blocking
+   * [326c6a5] TT#43557 augment DTMF blocking to support directional blocking
+ .
+   [ Eric Green ]
+   * [f91b64f] Make recording more accurately report source address. Fixes #584
+ .
+   [ Guillem Jover ]
+   * [0224a49] TT#40459 Move the rtpengine NFS mount point into its own systemd unit
+   * [5ba5295] TT#42906 Add systemd notify support
+ .
+   [ netaskd ]
+   * [8f4c547] update rtpengine-recording pid filename
+ .
+   [ Alexey Vasilyev ]
+   * [422e18d] Separate build with/without transcoding
+ .
+   [ Øyvind Kolbu ]
+   * [cceadfd] Match latest variable names in rtpengine.init.
+   * [a69bf05] Add Graphite options to el sysconfig.
+ .
+   [ Sipwise Jenkins Builder ]
+Checksums-Sha1:
+ 2ecd200598fafd4fc134aba73a0d71c6d59f48d5 1686 ngcp-rtpengine_7.0.0.0+0~mr7.0.0.0.dsc
+ eb85c2c2cb2bc47c3d6f58c84104b2604d9ca1eb 332656 ngcp-rtpengine_7.0.0.0+0~mr7.0.0.0.tar.xz
+ 8df5bfff73f9ee6a44ecc5af96b97d7e13686f54 958312 ngcp-rtpengine-daemon-dbgsym_7.0.0.0+0~mr7.0.0.0_armhf.deb
+ 101f7bf0ac05f46a8af62323bd695813ee7e3756 179202 ngcp-rtpengine-daemon_7.0.0.0+0~mr7.0.0.0_armhf.deb
+ c5664d2e269101b1fbb8ee64d09dec997e9358f4 2424 ngcp-rtpengine-iptables-dbgsym_7.0.0.0+0~mr7.0.0.0_armhf.deb
+ e93c66257e9d6a5f6e853aac99732a4d686b1021 34262 ngcp-rtpengine-iptables_7.0.0.0+0~mr7.0.0.0_armhf.deb
+ 27e9dc91884b52d3e39a874e4fe12cbf2153ac98 54056 ngcp-rtpengine-kernel-dkms_7.0.0.0+0~mr7.0.0.0_all.deb
+ d593d8d34bcba3421a2f7d641402ede6d24992d1 83412 ngcp-rtpengine-kernel-source_7.0.0.0+0~mr7.0.0.0_all.deb
+ 74605ddb6c74ff605a0ca8c02ba5a0d300322e8e 233582 ngcp-rtpengine-recording-daemon-dbgsym_7.0.0.0+0~mr7.0.0.0_armhf.deb
+ 1c93f7333f23637e3f6d75645f0e88cbe583f32e 64230 ngcp-rtpengine-recording-daemon_7.0.0.0+0~mr7.0.0.0_armhf.deb
+ fcd358764c7cbf99056002d1f1efafa0efd9d55c 51440 ngcp-rtpengine-utils_7.0.0.0+0~mr7.0.0.0_all.deb
+ 2f162ee9424eeb659b15ff1c3a677f84afafbd1f 91900 ngcp-rtpengine_7.0.0.0+0~mr7.0.0.0_all.deb
+ bbf54a312c15255d88efc01b5ba2944713308d7f 13572 ngcp-rtpengine_7.0.0.0+0~mr7.0.0.0_armhf.buildinfo
+Checksums-Sha256:
+ 2a39a2155f0bf46d395ccf887b4f3b1d0f0b7c413c6e59712e59205db04ba3ff 1686 ngcp-rtpengine_7.0.0.0+0~mr7.0.0.0.dsc
+ 436c9d01230c406776d5d0db544c90313d7920050f827baacccb36d359ac0d3e 332656 ngcp-rtpengine_7.0.0.0+0~mr7.0.0.0.tar.xz
+ 245512029d8c77a0c7265c5f7e6619826b94bc6702f10f39ae1d55f718a38f5c 958312 ngcp-rtpengine-daemon-dbgsym_7.0.0.0+0~mr7.0.0.0_armhf.deb
+ a431bfb689e936adbd82f086f1e372c3d52954767be52c6d9aff743445e215f1 179202 ngcp-rtpengine-daemon_7.0.0.0+0~mr7.0.0.0_armhf.deb
+ 2abc845e1763e5e5e36ee7fcce26c5cbe90e8949801f0ba9dcea12b874e4182f 2424 ngcp-rtpengine-iptables-dbgsym_7.0.0.0+0~mr7.0.0.0_armhf.deb
+ da52b35cd99c0a3533c0c0b19de4c7f85ec0e36875cfbceb896ecee028e3c898 34262 ngcp-rtpengine-iptables_7.0.0.0+0~mr7.0.0.0_armhf.deb
+ c829f3f518b00604cd7e6375defc38e960b625b6f28af0ae6b900ab8a43abc60 54056 ngcp-rtpengine-kernel-dkms_7.0.0.0+0~mr7.0.0.0_all.deb
+ 948e395a8ae64348a1a0f4a49b2ac4d22356267828f91073fb09f56463f421ac 83412 ngcp-rtpengine-kernel-source_7.0.0.0+0~mr7.0.0.0_all.deb
+ a2a960bf8601e5c70d6239e188c8f36d3f7c6fa9183dee441f155caabfde492f 233582 ngcp-rtpengine-recording-daemon-dbgsym_7.0.0.0+0~mr7.0.0.0_armhf.deb
+ 702a73aa07291356f2e6065b4d95d51d083b8cc85e5c06c15abba4a37afeddd2 64230 ngcp-rtpengine-recording-daemon_7.0.0.0+0~mr7.0.0.0_armhf.deb
+ f1dcd65e9c4053c1bb03c8556f61e921b1285cec2ddb31cc924be418ece67a89 51440 ngcp-rtpengine-utils_7.0.0.0+0~mr7.0.0.0_all.deb
+ 909891f36282bbc70feb3e0795b55e609db9213141134436b15d3fe055ab040c 91900 ngcp-rtpengine_7.0.0.0+0~mr7.0.0.0_all.deb
+ 68dcccd8f65e40acbbbe2ce1c93fc72eb18a364b986459e0a31464889d3d93c8 13572 ngcp-rtpengine_7.0.0.0+0~mr7.0.0.0_armhf.buildinfo
+Files:
+ 230cb7d0c387d056981237e2335ada7b 1686 net optional ngcp-rtpengine_7.0.0.0+0~mr7.0.0.0.dsc
+ f0cffdf473896da7e65b5f630ed4cc21 332656 net optional ngcp-rtpengine_7.0.0.0+0~mr7.0.0.0.tar.xz
+ 1b4f49030d5f70c9cf0a750d7ef64834 958312 debug extra ngcp-rtpengine-daemon-dbgsym_7.0.0.0+0~mr7.0.0.0_armhf.deb
+ d8f23b209c9a590163ed202e1af86b31 179202 net optional ngcp-rtpengine-daemon_7.0.0.0+0~mr7.0.0.0_armhf.deb
+ fae1c82e640421253a7a4e5fa921688c 2424 debug extra ngcp-rtpengine-iptables-dbgsym_7.0.0.0+0~mr7.0.0.0_armhf.deb
+ 7c098a43fd12f585add9d8d3276d02bc 34262 net optional ngcp-rtpengine-iptables_7.0.0.0+0~mr7.0.0.0_armhf.deb
+ fa6c1b8235fd8a1f83ea122bb9adfd7b 54056 net optional ngcp-rtpengine-kernel-dkms_7.0.0.0+0~mr7.0.0.0_all.deb
+ 2046d65c1ea045d5529bb5c102bd3f25 83412 net optional ngcp-rtpengine-kernel-source_7.0.0.0+0~mr7.0.0.0_all.deb
+ b9722535475f1c92bc8b2230d6bcff27 233582 debug extra ngcp-rtpengine-recording-daemon-dbgsym_7.0.0.0+0~mr7.0.0.0_armhf.deb
+ 3c9b2f61e45d25de8f3393a1c0daa8ce 64230 net optional ngcp-rtpengine-recording-daemon_7.0.0.0+0~mr7.0.0.0_armhf.deb
+ ccf9af567f964a53349d0f0252483a72 51440 net optional ngcp-rtpengine-utils_7.0.0.0+0~mr7.0.0.0_all.deb
+ cefba41d7497b2a811efb1d1ccd55f74 91900 net optional ngcp-rtpengine_7.0.0.0+0~mr7.0.0.0_all.deb
+ ded325f70778d37f8e0a387385f928fb 13572 net optional ngcp-rtpengine_7.0.0.0+0~mr7.0.0.0_armhf.buildinfo
