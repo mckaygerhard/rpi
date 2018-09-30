@@ -58,7 +58,7 @@ sudo apt-get install freeswitch
 Built `.deb`s with all modules except `exclude_modules=db_mongodb ndb_mongodb db_cassandra ndb_cassandra db_oracle nsq osp phonenum`.
 
 - kamailio 5.1.1 - 45233bf
-- kamailio 5.2.0 - bf5be06
+- kamailio 5.2.0 (master) - bf5be06
 
 
 
@@ -67,7 +67,7 @@ Built `.deb`s with all modules except `exclude_modules=db_mongodb ndb_mongodb db
 Built `.deb`s with all modules.
 
 - rtpengine 6.1.1.0 - f3af4c4
-- rtpengine 7.0.0.0 - 3102357
+- rtpengine 7.0.0.0 (master) - 3102357
 
 
 
